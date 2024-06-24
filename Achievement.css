@@ -1,0 +1,86 @@
+body
+{
+    background-image: url('image/whitewallpaper.jpg');
+}
+    @keyframes animateImage 
+{
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.button 
+{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #b05a1d;
+    border-radius: 8px;
+    background: #ff932f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff932f), to(#b05a1d));
+    background: -moz-linear-gradient(top, #ff932f, #b05a1d);
+    background: linear-gradient(to bottom, #ff932f, #b05a1d);
+    -webkit-box-shadow: #ff9a31 0px 0px 40px 0px;
+    -moz-box-shadow: #ff9a31 0px 0px 40px 0px;
+    box-shadow: #ff9a31 0px 0px 40px 0px;
+    font: normal normal bold 20px comic sans ms;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.button:hover 
+{
+    border: 1px solid #fc8029;
+    background: #ffb038;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffb038), to(#d36c23));
+    background: -moz-linear-gradient(top, #ffb038, #d36c23);
+    background: linear-gradient(to bottom, #ffb038, #d36c23);
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.button:active 
+{
+    background: #b05a1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b05a1d), to(#b05a1d));
+    background: -moz-linear-gradient(top, #b05a1d, #b05a1d);
+    background: linear-gradient(to bottom, #b05a1d, #b05a1d);
+    text-transform: uppercase
+}
+.button:focus 
+{
+    text-transform: uppercase
+}
+        /* CSS for image */
+.image 
+    {
+        display: block;
+        animation: animateImage 0.5s forwards;
+        animation-delay: calc(0.1s * var(--index)); /* Animation properties */
+    }
+            
+        /* Define keyframes for word-by-word animation */
+        @keyframes wordAnimation 
+    {
+        0%   { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+        /* Apply animation to each word */
+.word-animate span 
+    {
+        display: inline-block;
+        opacity: 0;
+        animation: wordAnimation 0.5s forwards;
+        animation-delay: calc(0.1s * var(--index));
+    }
+        /* CSS for reversed list */
+.reversed-list 
+    {
+        text-align: right; /* Align text to the right */
+        direction: rtl; /* Right-to-left text direction */
+        margin: 20px; /* Add some margin for spacing */
+    }
+.reversed-list li
+    {
+        list-style-type: none; /* Remove default list bullet */
+        margin-bottom: 10px; /* Add margin between list items */
+    }
